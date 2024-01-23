@@ -1,4 +1,4 @@
-package br.com.buscafrete.BuscaFrete.repositories;
+package br.com.buscafrete.BuscaFrete.repositories.transportadora;
 
 import br.com.buscafrete.BuscaFrete.domain.transportadora.Transportadora;
 import org.springframework.data.mongodb.repository.MongoRepository;

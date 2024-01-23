@@ -15,10 +15,10 @@ public class Transportadora {
     private String nome;
     private String cidade;
 
-    public Transportadora(String id, String nome, String cidade) {
-        Id = id;
-        this.nome = nome;
-        this.cidade = cidade;
+    public Transportadora(TransportadoraDTO transportadoraDTO) {
+        Id = transportadoraDTO.id();
+        this.nome = transportadoraDTO.nome();
+        this.cidade = transportadoraDTO.cidade();
     }
 
     public String getId() {
