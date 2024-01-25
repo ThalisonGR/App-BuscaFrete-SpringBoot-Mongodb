@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/BuscaFrete.iml" filepath="$PROJECT_DIR$/.idea/BuscaFrete.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/App-BuscaFrete-SpringBoot-Mongodb.iml" filepath="$PROJECT_DIR$/.idea/App-BuscaFrete-SpringBoot-Mongodb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BuscaFrete/BuscaFrete.iml" filepath="$PROJECT_DIR$/BuscaFrete/BuscaFrete.iml" />
     </modules>
   </component>
 </project>

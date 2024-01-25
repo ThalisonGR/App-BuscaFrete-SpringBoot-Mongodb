@@ -31,20 +31,20 @@ public class MotoristaController {
     }
 
     @GetMapping("/getByID/{id}")
-    public ResponseEntity<Motorista> getByID(@PathParam("id") String id){
+    public ResponseEntity<Motorista> getByID(@PathVariable String id){
         Motorista mLista = service.getByID(id);
         return ResponseEntity.ok().body(mLista);
     }
 
     @PutMapping("/update/{id}")
-    public ResponseEntity<Motorista> update(@PathParam("id") String id, @RequestBody MotoristaDTO motoristaDTO){
+    public ResponseEntity<Motorista> update(@PathVariable String id, @RequestBody MotoristaDTO motoristaDTO){
         Motorista upMotorista = service.update(id , motoristaDTO);
         return  ResponseEntity.ok().body(upMotorista);
 
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity <Boolean> delete(@PathParam("id") String id){
+    public ResponseEntity <Boolean> delete(@PathVariable String id){
         boolean delete = service.delete(id);
         if (delete){
             return  new ResponseEntity<>(HttpStatus.OK);

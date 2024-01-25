@@ -1,7 +1,10 @@
 package br.com.buscafrete.BuscaFrete.domain.motorista;
 
+import lombok.NoArgsConstructor;
+import netscape.javascript.JSObject;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
 
 @Document(collection = "motorista")
 public class Motorista {
@@ -12,9 +15,11 @@ public class Motorista {
     private String cnpj;
     private String tio_caminhao;
 
+    public Motorista(){
+
+    }
     public Motorista(MotoristaDTO motoristaDTO){
 
-        this.id = motoristaDTO.id();
         this.nome = motoristaDTO.nome();
         this.cnpj = motoristaDTO.cnpj();
         this.tio_caminhao = motoristaDTO.tipo_caminhao();
@@ -51,4 +56,5 @@ public class Motorista {
     public void setTio_caminhao(String tio_caminhao) {
         this.tio_caminhao = tio_caminhao;
     }
+
 }
