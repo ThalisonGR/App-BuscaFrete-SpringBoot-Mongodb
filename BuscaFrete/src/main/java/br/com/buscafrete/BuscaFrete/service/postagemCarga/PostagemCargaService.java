@@ -38,8 +38,9 @@ public class PostagemCargaService {
         return  postagemCarga;
     }
 
-    public void delete(String id){
+    public boolean delete(String id){
         iPostagemCarga.deleteById(id);
+        return true;
     }
 
 }

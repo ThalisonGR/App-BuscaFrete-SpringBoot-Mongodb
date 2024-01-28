@@ -16,6 +16,10 @@ public class PostagemCarga {
     private BigDecimal pesoTonelada;
     private BigDecimal valorFrete;
 
+    public PostagemCarga(){
+        
+    }
+
     public PostagemCarga(PostagemCargaDTO postagemCargaDTO) {
         this.origemCarga = postagemCargaDTO.origemCarga();
         this.destinoCarga = postagemCargaDTO.destinoCarga();
