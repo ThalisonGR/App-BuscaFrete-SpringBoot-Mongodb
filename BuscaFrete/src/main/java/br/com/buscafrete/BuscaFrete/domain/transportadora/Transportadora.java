@@ -10,23 +10,26 @@ import java.math.BigDecimal;
 @Document(collection = "transportadora")
 public class Transportadora {
 
+
     @Id
-    private  String Id;
+    private  String id;
     private String nome;
     private String cidade;
 
+    public  Transportadora(){
+
+    }
     public Transportadora(TransportadoraDTO transportadoraDTO) {
-        Id = transportadoraDTO.id();
         this.nome = transportadoraDTO.nome();
         this.cidade = transportadoraDTO.cidade();
     }
 
     public String getId() {
-        return Id;
+        return id;
     }
 
     public void setId(String id) {
-        Id = id;
+        id = id;
     }
 
     public String getNome() {

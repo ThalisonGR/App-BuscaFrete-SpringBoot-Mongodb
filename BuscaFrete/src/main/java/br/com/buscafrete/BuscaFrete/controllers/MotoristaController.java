@@ -30,10 +30,10 @@ public class MotoristaController {
         return ResponseEntity.ok().body(mlista);
     }
 
-    @GetMapping("/getByID/{id}")
+    @GetMapping("/consulta/{id}")
     public ResponseEntity<Motorista> getByID(@PathVariable String id){
-        Motorista mLista = service.getByID(id);
-        return ResponseEntity.ok().body(mLista);
+        Motorista motorista = service.getByID(id);
+        return ResponseEntity.ok().body(motorista);
     }
 
     @PutMapping("/update/{id}")

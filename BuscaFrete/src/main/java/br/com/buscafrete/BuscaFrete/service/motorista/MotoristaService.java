@@ -31,10 +31,10 @@ public class MotoristaService {
     }
 
     public Motorista update(String id, MotoristaDTO motoristaDTO) {
-        Motorista motorista = iMotoristaRepository.findById(id).orElse(null);
+        Motorista motorista = getByID(id);
         motorista.setNome(motoristaDTO.nome());
         motorista.setCnpj(motoristaDTO.cnpj());
-        motorista.setTio_caminhao(motoristaDTO.tipo_caminhao());
+        motorista.setTipo_caminhao(motoristaDTO.tipo_caminhao());
         iMotoristaRepository.save(motorista);
         return  motorista;
     }
