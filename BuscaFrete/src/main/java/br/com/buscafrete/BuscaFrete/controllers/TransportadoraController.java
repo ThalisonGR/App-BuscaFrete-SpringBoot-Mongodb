@@ -45,9 +45,13 @@ public class TransportadoraController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Void> delete(@PathVariable String id) {
-        transportadoraService.delete(id);
-        return  ResponseEntity.noContent().build();
+    public ResponseEntity <Boolean> delete(@PathVariable String id){
+        boolean delete = transportadoraService.delete(id);
+        if (delete){
+            return  new ResponseEntity<>(HttpStatus.OK);
+        }else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
 }

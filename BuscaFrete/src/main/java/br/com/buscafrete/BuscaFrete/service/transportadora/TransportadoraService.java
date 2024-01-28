@@ -37,8 +37,8 @@ public class TransportadoraService {
         return transportadora;
     }
 
-    public void delete(String id){
+    public Boolean delete(String id){
         iTransportadoraRepository.deleteById(id);
-
+        return true;
     }
 }
